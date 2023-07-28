@@ -8,4 +8,7 @@
     <string name="dashboard_text">This is dashboard Fragment</string>
     <string name="home_text">This is home Fragment</string>
     <string name="notifications_text">This is notifications Fragment</string>
+    <string name="edit_text_first">Insert Your email</string>
+    <string name="take_input_button">Take input</string>
+    <string name="welcome_text">Welcome!</string>
 </resources>
