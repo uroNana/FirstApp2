@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    //elenco di id associati ai testi in lingua Italiana
+
+    <string name="app_name">Prima App</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Pannello di controllo</string>
+    <string name="title_notifications">Notifiche</string>
+    <string name="dashboard_text">Questo è il Pannello di controllo</string>
+    <string name="home_text">Questo è l\'home</string>
+    <string name="notifications_text">Queste sono le notifiche</string>
+    <string name="edit_text_first">Inserisci la tua email</string>
+    <string name="take_input_button">Prendi input</string>
+    <string name="welcome_text">Benvenuto!</string>
+    <string name="activity2_text">Activity 2</string>
+    <string name="to_home_fragment_text">Per l\'Home Fragment</string>
+    <string name="to_other_activity_text">Per l\'altra Activity</string>
+</resources>

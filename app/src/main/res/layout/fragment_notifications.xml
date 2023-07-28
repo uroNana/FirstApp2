@@ -6,15 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".ui.notifications.NotificationsFragment">
 
+    // Relative Layout
+    // TEXTVIEW con testo "this is notification Fragment"
     <TextView
         android:id="@+id/text_notifications"
         android:text="@string/notifications_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:background="#FFEB3B"
-        android:textColor="#E91E63"
-        android:textAllCaps="true"/>
+        style="@style/text_special"
+        android:layout_centerInParent="true" />
 </RelativeLayout>

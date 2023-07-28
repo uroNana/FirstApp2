@@ -11,12 +11,11 @@ import com.example.bottomnavigation.databinding.FragmentNotificationsBinding
 
 class NotificationsFragment : Fragment() {
 
+    //definizione della variabile BINDING
     private var _binding: FragmentNotificationsBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
+    //funzione ONCREATEVIEW
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -29,6 +28,7 @@ class NotificationsFragment : Fragment() {
         return root
     }
 
+    //funzione ONDESTROYVIEW
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

@@ -13,7 +13,9 @@ import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
 
+    //definizione della variabile BINDING
     private lateinit var binding: ActivityMainBinding
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,26 +23,33 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
+        //variabile con binding del Bottom navigation view
         val navView: BottomNavigationView = binding.navView
 
+        //variabile associata al fragment in activity main
         val navController = findNavController(R.id.nav_host_fragment_activity_main)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
+
+        // variabile contenente gli id di ogni Item presente del bottom navigation menu
         val appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications
             )
         )
+        //associazione del fragment presente in activity main con gli items e il bottom nav menu
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
+        //binding del bottone fab con funzione di testo Snackbar
         binding.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+            Snackbar.make(view, "Snackbar Test", Snackbar.LENGTH_LONG)
                 .setAnchorView(R.id.fab)
                 .setAction("Action", null).show()
+                //.setAnchorView(R.id.fab) per ottenere lo spostamento del fab
         }
 
     }
-
-
 }
+//TODO aggiungi file "values-sw820dp" con dimensioni adattate
+//TODO aggiungi due opzioni di menu di cui una con 3 item con "app:showAsAction="never" " e
+// l'altra con un item con "app:showAsAction="always" "

@@ -1,14 +1,18 @@
 <resources>
-    <string name="app_name">BottomNavigation</string>
+
+    //elenco di id associati ai testi
+
+    <string name="app_name">First App</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="dashboard_text">This is dashboard Fragment</string>
-    <string name="home_text">This is home Fragment</string>
-    <string name="notifications_text">This is notifications Fragment</string>
+    <string name="dashboard_text">This is dashboard</string>
+    <string name="home_text">This is home</string>
+    <string name="notifications_text">This is notifications</string>
     <string name="edit_text_first">Insert Your email</string>
     <string name="take_input_button">Take input</string>
     <string name="welcome_text">Welcome!</string>
+    <string name="activity2_text">Activity 2</string>
+    <string name="to_home_fragment_text">To Home Fragment</string>
+    <string name="to_other_activity_text">To Other Activity</string>
 </resources>

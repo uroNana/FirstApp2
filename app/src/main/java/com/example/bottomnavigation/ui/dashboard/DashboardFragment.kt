@@ -15,12 +15,11 @@ import com.google.android.material.snackbar.Snackbar
 
 class DashboardFragment : Fragment() {
 
+    //definizione della variabile BINDING
     private var _binding: FragmentDashboardBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
+    //funzione ONCREATEVIEW
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -30,10 +29,12 @@ class DashboardFragment : Fragment() {
         _binding = FragmentDashboardBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
+        //binding del bottone Take Input con trasporto del testo dal EditText al TextView e aggiunta di Snackbar
         binding.actionButton.setOnClickListener {
             binding.second.text = binding.first.text
             Snackbar.make(binding.actionButton, binding.second.text, Snackbar.LENGTH_SHORT).show()
         }
+        // binding di attivazione del bottone Take Input con condizioni
         binding.first.doOnTextChanged {text, start, before, count ->
             Log.v("DashboardFragment", "edit text values: text = $text, start = $start, before = $before, count = $count")
 
@@ -43,7 +44,7 @@ class DashboardFragment : Fragment() {
         }
         return root
     }
-
+    //funzione ONDESTROYVIEW
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

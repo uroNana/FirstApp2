@@ -13,12 +13,11 @@ import com.example.bottomnavigation.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
 
+    //definizione della variabile BINDING
     private var _binding: FragmentHomeBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
+    //funzione ONCREATEVIEW
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -28,7 +27,7 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        //In this section we navigate to an External Activity named Activity2 where we doesn't have any type of navigation
+        //binding del bottone di navigazione tra activities (da MainActivity a Activity2)
         binding.buttonNavigation.setOnClickListener {
             val intent = Intent(requireContext(), Activity2::class.java)
             startActivity(intent)
@@ -37,6 +36,7 @@ class HomeFragment : Fragment() {
         return root
     }
 
+    //funzione ONDESTROYVIEW
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

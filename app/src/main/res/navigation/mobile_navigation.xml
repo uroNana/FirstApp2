@@ -5,6 +5,9 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@+id/navigation_home">
 
+
+    //menu di navigazione del Main Activity contenente i fragment presenti
+    //ed eventuali attività di navigazione
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.example.bottomnavigation.ui.home.HomeFragment"
