@@ -6,8 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".ui.notifications.NotificationsFragment">
 
-    // Relative Layout
-    // TEXTVIEW con testo "this is notification Fragment"
+    <!--Relative Layout
+     TEXTVIEW con testo "this is notification Fragment"-->
     <TextView
         android:id="@+id/text_notifications"
         android:text="@string/notifications_text"

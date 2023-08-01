@@ -6,8 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
-    //Constraint Layout
-    // TEXTVIEW con testo "this is home fragment"
+    <!--Constraint Layout
+    TEXTVIEW con testo "this is home fragment"-->
     <TextView
         android:id="@+id/text_home"
         style="@style/text_notmal"
@@ -17,7 +17,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
-    // bottone di navigazione con testo "to other Activity"
+    <!--bottone di navigazione con testo "to other Activity"-->
     <Button
         android:id="@+id/button_navigation"
         style="@style/button_normal"

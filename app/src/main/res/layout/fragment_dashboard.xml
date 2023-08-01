@@ -9,8 +9,8 @@
     android:layout_height="match_parent"
     tools:context=".ui.dashboard.DashboardFragment">
 
-    //Constraint Layout
-    // TEXTVIEW con testo "welcome"
+    <!--Constraint Layout
+    TEXTVIEW con testo "welcome"-->
     <TextView
         android:id="@+id/second"
         style="@style/text_notmal"
@@ -20,7 +20,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    // EDITTEXT con hint di testo "Insert your email" e tipo di input settato per Email
+    <!--EDITTEXT con hint di testo "Insert your email" e tipo di input settato per Email-->
     <EditText
         android:id="@+id/first"
         style="@style/text_notmal"

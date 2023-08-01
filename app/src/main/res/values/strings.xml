@@ -12,7 +12,6 @@
     <string name="edit_text_first">Insert Your email</string>
     <string name="take_input_button">Take input</string>
     <string name="welcome_text">Welcome!</string>
-    <string name="activity2_text">Activity 2</string>
     <string name="to_home_fragment_text">To Home Fragment</string>
     <string name="to_other_activity_text">To Other Activity</string>
 </resources>

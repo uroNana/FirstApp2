@@ -7,8 +7,8 @@
     android:layout_height="match_parent"
     android:paddingTop="?attr/actionBarSize">
 
-    //Constraint Layout
-    //fragment associato al menu di navigazione dell'activity
+    <!--Constraint Layout
+    fragment associato al menu di navigazione dell'activity-->
     <fragment
         android:id="@+id/nav_host_fragment_activity_main"
         android:name="androidx.navigation.fragment.NavHostFragment"
@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:navGraph="@navigation/mobile_navigation" />
 
-    //BOTTOM NAVIGATION MENU associato al proprio menu di navigazione
+<!--BOTTOM NAVIGATION MENU associato al proprio menu di navigazione-->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
         android:layout_width="match_parent"

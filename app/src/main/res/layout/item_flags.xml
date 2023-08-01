@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/item_flags_height_s"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/item_flags_height_m"
+    android:orientation="horizontal">
+
+    <!--text view per la lista di testi-->
+    <TextView
+        android:id="@+id/flags_text"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:text="Italian flag"
+        android:textSize="30sp"
+        android:gravity="center" />
+
+    <!--image view per la lista di immagini-->
+    <ImageView
+        android:id="@+id/flags_drawable"
+        android:layout_weight="1"
+        android:layout_margin="@dimen/item_flags_margin_image_end"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:src="@drawable/image1" />
+</LinearLayout>
+
+<!--    separatore fra item-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        app:layout_constraintTop_toBottomOf="@id/flags_drawable"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/black"/>
+
+</LinearLayout>

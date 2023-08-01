@@ -6,24 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".Activity2">
 
-    //Constraint Layout
-    //Text View con testo "activity Second"
-    <TextView
-        android:id="@+id/activity2_text"
-        android:text="@string/activity2_text"
-        style="@style/text_special"
+<!--    Constraint Layout-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/flags_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/activity2_button_navigation"
+        tools:listitem="@layout/item_flags"/>
 
-    // bottone di navigazione con testo "to home fragment"
+
+
+<!--    bottone di navigazione con testo "to home fragment"-->
     <Button
         android:id="@+id/activity2_button_navigation"
         style="@style/button_normal"
         android:text="@string/to_home_fragment_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/activity2_text" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

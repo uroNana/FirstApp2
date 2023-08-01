@@ -53,3 +53,5 @@ class MainActivity : AppCompatActivity() {
 //TODO aggiungi file "values-sw820dp" con dimensioni adattate
 //TODO aggiungi due opzioni di menu di cui una con 3 item con "app:showAsAction="never" " e
 // l'altra con un item con "app:showAsAction="always" "
+
+//TODO chiedi ad antonio la differenza tra i vari layout
