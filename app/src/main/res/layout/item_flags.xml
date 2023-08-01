@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--utilizziamo un linear layout per ottimizzare il posizionamento degli item-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="@dimen/item_flags_height_s"
@@ -6,6 +7,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical">
 
+<!--   inseriamo un linear layout all'interno del primo dove andremo ad inserire gi item
+ della lista, mentre nel primo che conterrà il secondo definiamo la view del separatore degli item-->
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="@dimen/item_flags_height_m"

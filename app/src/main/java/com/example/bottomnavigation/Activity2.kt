@@ -17,7 +17,7 @@ class Activity2 : AppCompatActivity() {
         FlagsList(R.drawable.image2, "French flag"),
         FlagsList(R.drawable.image3, "Union flag")
     )
-
+//TODO chiedi perche utilizzando L'extract string resource per le stringhe della lista da errore
     //classe senza BINDING
     //funzione ONCREATE
     override fun onCreate(savedInstanceState: Bundle?) {

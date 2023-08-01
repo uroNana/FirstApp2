@@ -14,4 +14,7 @@
     <string name="welcome_text">Benvenuto!</string>
     <string name="to_home_fragment_text">Per l\'Home Fragment</string>
     <string name="to_other_activity_text">Per l\'altra Activity</string>
+    <string name="italian_flag">Bandiera Italiana</string>
+    <string name="french_flag">Bandiera Francese</string>
+    <string name="union_flag">Bandiera del Regno Unito</string>
 </resources>

@@ -4,6 +4,7 @@ import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -15,7 +16,6 @@ class MainActivity : AppCompatActivity() {
 
     //definizione della variabile BINDING
     private lateinit var binding: ActivityMainBinding
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,6 +49,7 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
 }
 //TODO aggiungi file "values-sw820dp" con dimensioni adattate
 //TODO aggiungi due opzioni di menu di cui una con 3 item con "app:showAsAction="never" " e

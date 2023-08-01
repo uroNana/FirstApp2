@@ -14,4 +14,7 @@
     <string name="welcome_text">Welcome!</string>
     <string name="to_home_fragment_text">To Home Fragment</string>
     <string name="to_other_activity_text">To Other Activity</string>
+    <string name="italian_flag">Italian flag</string>
+    <string name="french_flag">French flag</string>
+    <string name="union_flag">Union flag</string>
 </resources>
