@@ -2,45 +2,49 @@ package List
 
 import FlagsList
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.bottomnavigation.R
+import com.example.bottomnavigation.databinding.ItemFlagsBinding
 
 //creazione della classe View Holder
-class  FlagsListViewHolder(view: View): RecyclerView.ViewHolder(view) {
+class  FlagsListViewHolder(val binding: ItemFlagsBinding): RecyclerView.ViewHolder(binding.root) {
 
-    //definisci i valori riferiti a i View del layout
-    val flagsText: TextView
-    val flagsDrawable: ImageView
-
-    //e associale all'id delle View
-    init {
-        flagsText = view.findViewById(R.id.flags_text)
-        flagsDrawable = view.findViewById(R.id.flags_drawable)
+    //binding degli item
+    fun bind(item: FlagsList) {
+        binding.flagsText.text = item.name.toString()
+        binding.flagsDrawable.setImageResource(item.image)
     }
-
 }
 //*implement members*     *change to constructor invocation* // implementa il valore riferito alla lista della classe kotlin
-class flagsListAdapter(val item: List<FlagsList>): RecyclerView.Adapter<FlagsListViewHolder>() {
-    //                                                                  rimuovi List.
+class flagsListAdapter(): ListAdapter<FlagsList, FlagsListViewHolder>(DiffCallback()) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FlagsListViewHolder {
-        //definisci la View associata al layout della lista
-        val flagsView = LayoutInflater.from(parent.context).inflate(R.layout.item_flags, parent, false)
+        //Questo metodo viene chiamato dalla RecyclerView quando deve creare una nuova istanza
+        // di ViewHolder per visualizzare un elemento nella posizione specificata.
+
+        //crea una vista delle informazioni relative all'oggetto FlagsList
+        val flagsView = ItemFlagsBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        //restituisce un'istanza di FlagsListViewHolder che conterrà la vista creata.
         return  FlagsListViewHolder(flagsView)
     }
 
+    //per confrontare gli oggetti di due diverse liste di elementi e determinare se sono gli
+    // stessi elementi o se hanno gli stessi contenuti
+    private class DiffCallback : DiffUtil.ItemCallback<FlagsList>() {
+        override fun areItemsTheSame(oldItem: FlagsList, newItem: FlagsList) =
+            oldItem == newItem
+        override fun areContentsTheSame(oldItem: FlagsList, newItem: FlagsList) =
+            oldItem == newItem
+    }
     override fun onBindViewHolder(holder: FlagsListViewHolder, position: Int) {
         //Collega i dati alla view in base alla posizione dell'elemento nella lista
-        holder.flagsDrawable.setImageResource(item[position].image)
-
-        holder.flagsText.text = item[position].name
+        val item = getItem(position)
+        holder.bind(item)
     }
 
-    override fun getItemCount(): Int {
+    //override fun getItemCount(): Int {
         //return della dimensione della Lista
-        return item.size
-    }
+        //return item.size
+    //}
 }

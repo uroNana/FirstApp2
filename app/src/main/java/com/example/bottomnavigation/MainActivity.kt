@@ -56,3 +56,6 @@ class MainActivity : AppCompatActivity() {
 // l'altra con un item con "app:showAsAction="always" "
 
 //TODO chiedi ad antonio la differenza tra i vari layout
+
+
+//Todo per aggiungere rettangolo di sfondo per item usare cardView con background

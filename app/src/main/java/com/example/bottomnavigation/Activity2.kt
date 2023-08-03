@@ -11,13 +11,6 @@ import androidx.recyclerview.widget.RecyclerView
 
 class Activity2 : AppCompatActivity() {
 
-    //variabile con elenco delle coppie di immagini e testi presenti nella lista
-    val dataList = listOf(
-        FlagsList(R.drawable.image1, "Italian flag"),
-        FlagsList(R.drawable.image2, "French flag"),
-        FlagsList(R.drawable.image3, "Union flag")
-    )
-//TODO chiedi perche utilizzando L'extract string resource per le stringhe della lista da errore
     //classe senza BINDING
     //funzione ONCREATE
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,12 +19,20 @@ class Activity2 : AppCompatActivity() {
         //associazione al layout activity2
         setContentView(R.layout.activity_2)
 
+        //variabile con elenco delle coppie di immagini e testi presenti nella lista
+        val dataList = listOf(
+            FlagsList(R.drawable.image1, getString(R.string.italian_flag)),
+            FlagsList(R.drawable.image2, getString(R.string.french_flag)),
+            FlagsList(R.drawable.image3,  getString(R.string.union_flag))
+        )
+
         //definizione della view della lista con id del RecycleView e dell'adapter
         val list = findViewById<RecyclerView>(R.id.flags_list)
-        val adapter = flagsListAdapter(dataList)
+        val adapter = flagsListAdapter()
         list.adapter = adapter
         list.layoutManager = LinearLayoutManager(this)
 
+        adapter.submitList(dataList)
         //definizione con associazione al bottone di navigazione
         val backButton: Button = findViewById(R.id.activity2_button_navigation)
 
